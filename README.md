@@ -3,8 +3,9 @@
 ## Creditos
 
 ### Integrantes
-Rudy Saldana Merenciano
-Angel Emilio Martinez Camacho
+
+- Rudy Saldana Merenciano
+- Angel Emilio Martinez Camacho
 
 ### Materia 
 Desarrollo de aplicaciones con bases de datos
