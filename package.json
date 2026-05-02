@@ -1,5 +1,5 @@
 {
-  "name": "proyecto_final",
+  "name": "gestion-almacen",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,15 +7,16 @@
   "scripts": {
     "dev": "node --watch --env-file=.env server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.33.0",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "better-sqlite3"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rusysa/Gestion-Almacen.git"
   },
+  "author": "Rudy Saldana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rusysa/Gestion-Almacen/issues"
+  },
+  "homepage": "https://github.com/Rusysa/Gestion-Almacen#readme",
   "dependencies": {
     "better-sqlite3": "^12.9.0",
     "express": "^5.2.1"
