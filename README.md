@@ -2,9 +2,14 @@
 
 ## Creditos
 
-Trabajo hecho por: Rudy Saldana Merenciano, Angel Emilio Martinez Camacho
-Materia: Desarrollo de aplicaciones con bases de datos
-Profesor: Jesus Alejandro Flores Hernandez
+### Integrantes
+Rudy Saldana Merenciano, Angel Emilio Martinez Camacho
+
+### Materia 
+Desarrollo de aplicaciones con bases de datos
+
+### Profesor
+Jesus Alejandro Flores Hernandez
 
 API REST sencilla con Express y SQLite (better-sqlite3) para gestionar compras, ventas e inventario. No incluye frontend. Los endpoints se prueban con curl.
 
