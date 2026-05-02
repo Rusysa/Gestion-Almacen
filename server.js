@@ -1,13 +1,17 @@
 import express from "express";
-import Database from "better-sqlite3";
+import apiRoutes from "./routes/index.js";
 
 const app = express();
-const db = new Database("./Database/app.db");
+app.use(express.json());
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
-});
+const port = Number(process.env.PORT) || 3000;
+
+app.use("/api", apiRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Hola mundo");
+  res.json({ mensaje: "API Gestion Almacen" });
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
