@@ -123,6 +123,13 @@ const clearTables = () => {
 
 const run = () => {
   createTables();
+  
+  const checkData = db.prepare("SELECT COUNT(*) as count FROM categoria").get();
+  if (checkData && checkData.count > 0) {
+    console.log("La base de datos ya contiene datos. Omitiendo la poblacion inicial.");
+    return;
+  }
+
   clearTables();
 
   const insertCategoria = db.prepare(

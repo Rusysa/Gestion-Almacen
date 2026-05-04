@@ -2,7 +2,12 @@ import Database from "better-sqlite3";
 import fs from "node:fs";
 import path from "node:path";
 
-const databaseDir = path.resolve("Database");
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const databaseDir = __dirname;
 const databasePath = path.join(databaseDir, "app.db");
 
 if (!fs.existsSync(databaseDir)) {
