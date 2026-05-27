@@ -48,3 +48,14 @@ export const updateRecord = (table, id, payload) => {
   const stmt = db.prepare(sql);
   return stmt.run([...columns.map((column) => payload[column]), id]);
 };
+
+export const traducirError = (error) => {
+  const msg = error.message || "";
+  if (msg.includes("has no column named")) return "La columna especificada no existe en la tabla.";
+  if (msg.includes("UNIQUE constraint failed")) return "Ya existe un registro con ese valor (dato duplicado).";
+  if (msg.includes("NOT NULL constraint failed")) return "Falta un campo obligatorio.";
+  if (msg.includes("no such table")) return "La tabla solicitada no existe.";
+  if (msg.includes("datatype mismatch")) return "El tipo de dato ingresado es incorrecto.";
+  if (msg.includes("FOREIGN KEY constraint failed")) return "El registro hace referencia a un dato que no existe.";
+  return "Ocurrió un error interno en el servidor.";
+};
